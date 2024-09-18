@@ -1,0 +1,1 @@
+import SimpleLightbox from "./js/1-gallery";
