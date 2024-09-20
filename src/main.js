@@ -1,1 +1,1 @@
-import SimpleLightbox from "./js/1-gallery";
+// import default SimpleLightbox from "./js/1-gallery";

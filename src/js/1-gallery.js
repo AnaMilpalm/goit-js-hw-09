@@ -65,14 +65,16 @@ const images = [
       },
     ];
     
-    const container = document.querySelector(".gallery");
+    const galleryList = document.querySelector("ul.gallery");
     
  
 
     const generateMarkupGallery = images
-     .map(({preview, original, description}) => {
+     .map(image  => {
+        const {preview, original, description} = image;
+        
         return `
-        <li class="gallery-item js-image-item">
+        <li class="gallery-item">
      <a class="gallery-link" href="${original}">
      <img
        class="gallery-image"
@@ -85,7 +87,7 @@ const images = [
         })
         .join("");
 
-container.insertAdjacentHTML('beforeend', generateMarkupGallery);
+    galleryList.insertAdjacentHTML('beforeend', generateMarkupGallery);
 
     import SimpleLightbox from 'simplelightbox';
     import 'simplelightbox/dist/simple-lightbox.min.css';
